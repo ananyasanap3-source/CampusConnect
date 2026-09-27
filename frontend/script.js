@@ -14,7 +14,7 @@ loginForm.addEventListener("submit", async function (event) {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/login",
+            "https://campusconnect-production-0cdf.up.railway.app/api/login",
             {
                 method: "POST",
 
@@ -43,7 +43,7 @@ loginForm.addEventListener("submit", async function (event) {
             );
 
             // Go to dashboard
-            window.location.href = "http://localhost:5500/dashboard.html";
+            window.location.href = "dashboard.html";
 
         } else {
 
