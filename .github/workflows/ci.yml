@@ -23,6 +23,6 @@ jobs:
         working-directory: ./backend
         run: npm install
 
-           - name: Check server.js syntax
+      - name: Check server.js syntax
         working-directory: ./backend
         run: node --check server.js
