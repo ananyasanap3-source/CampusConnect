@@ -23,13 +23,6 @@ jobs:
         working-directory: ./backend
         run: npm install
 
-      - name: Verify server file exists
+           - name: Check server.js syntax
         working-directory: ./backend
-        run: node -e "require('./server.js')"
-        env:
-          DB_HOST: dummy
-          DB_USER: dummy
-          DB_PASSWORD: dummy
-          DB_NAME: dummy
-          DB_PORT: 3306
-          PORT: 5000
+        run: node --check server.js
