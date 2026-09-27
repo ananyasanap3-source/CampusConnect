@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install backend dependencies
+        working-directory: ./backend
+        run: npm install
+
+      - name: Verify server file exists
+        working-directory: ./backend
+        run: node -e "require('./server.js')"
+        env:
+          DB_HOST: dummy
+          DB_USER: dummy
+          DB_PASSWORD: dummy
+          DB_NAME: dummy
+          DB_PORT: 3306
+          PORT: 5000
