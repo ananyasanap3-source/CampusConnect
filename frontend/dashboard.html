@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         SIDEBAR
+         ================================ -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Campus<span>Connect</span>
+        </div>
+
+        <nav>
+
+            <a href="http://127.0.0.1:5500/dashboard.html" class="active">
+                🏠 Dashboard
+            </a>
+
+            <a href="http://127.0.0.1:5500/students.html">
+                👥 Students
+            </a>
+
+            <a href="http://127.0.0.1:5500/study-groups.html">
+                📚 Study Groups
+            </a>
+
+            <a href="http://127.0.0.1:5500/events.html">
+                📢 Campus Events
+            </a>
+
+            <a href="http://127.0.0.1:5500/opportunities.html">
+                💼 Opportunities
+            </a>
+
+            <a href="http://127.0.0.1:5500/messages.html">
+                💬 Messages
+            </a>
+
+        </nav>
+
+        <button id="logoutButton">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- ================================
+         MAIN CONTENT
+         ================================ -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1 id="welcomeTitle">
+                    Welcome back! 👋
+                </h1>
+
+                <p>
+                    Here's what's happening around your campus.
+                </p>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="profile">
+
+                <div class="avatar" id="userAvatar">
+                    T
+                </div>
+
+                <div>
+
+                    <strong id="userName">
+                        Student
+                    </strong>
+
+                    <small id="userEmail">
+                        student@email.com
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================
+             QUICK ACTIONS
+             ================================ -->
+
+        <section class="quick-actions">
+
+
+            <!-- FIND STUDENTS -->
+
+            <a
+                href="http://127.0.0.1:5500/students.html"
+                class="action-card"
+            >
+
+                <div class="action-icon">
+                    👥
+                </div>
+
+                <div>
+
+                    <h3>
+                        Find Students
+                    </h3>
+
+                    <p>
+                        Connect with classmates
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- STUDY GROUPS -->
+
+            <a
+                href="http://127.0.0.1:5500/study-groups.html"
+                class="action-card"
+            >
+
+                <div class="action-icon">
+                    📚
+                </div>
+
+                <div>
+
+                    <h3>
+                        Study Groups
+                    </h3>
+
+                    <p>
+                        Study together
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- CAMPUS EVENTS -->
+
+            <a
+                href="http://127.0.0.1:5500/events.html"
+                class="action-card"
+            >
+
+                <div class="action-icon">
+                    📢
+                </div>
+
+                <div>
+
+                    <h3>
+                        Campus Events
+                    </h3>
+
+                    <p>
+                        Discover what's happening
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- OPPORTUNITIES -->
+
+            <a
+                href="http://127.0.0.1:5500/opportunities.html"
+                class="action-card"
+            >
+
+                <div class="action-icon">
+                    💼
+                </div>
+
+                <div>
+
+                    <h3>
+                        Opportunities
+                    </h3>
+
+                    <p>
+                        Internships & opportunities
+                    </p>
+
+                </div>
+
+            </a>
+
+        </section>
+
+
+        <!-- ================================
+             DASHBOARD GRID
+             ================================ -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- ================================
+                 UPCOMING EVENTS
+                 ================================ -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <h2>
+                        Upcoming Events
+                    </h2>
+
+                    <a href="http://127.0.0.1:5500/events.html">
+                        View all
+                    </a>
+
+                </div>
+
+
+                <!-- EVENT 1 -->
+
+                <div class="event">
+
+                    <div class="event-date">
+
+                        <strong>
+                            24
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Campus Hackathon
+                        </h3>
+
+                        <p>
+                            10:00 AM • Main Auditorium
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EVENT 2 -->
+
+                <div class="event">
+
+                    <div class="event-date">
+
+                        <strong>
+                            27
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Tech Club Meetup
+                        </h3>
+
+                        <p>
+                            4:00 PM • Innovation Lab
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EVENT 3 -->
+
+                <div class="event">
+
+                    <div class="event-date">
+
+                        <strong>
+                            02
+                        </strong>
+
+                        <span>
+                            OCT
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Freshers Social
+                        </h3>
+
+                        <p>
+                            6:30 PM • College Ground
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 ANNOUNCEMENTS
+                 ================================ -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <h2>
+                        Announcements
+                    </h2>
+
+                    <a href="#">
+                        View all
+                    </a>
+
+                </div>
+
+
+                <!-- ANNOUNCEMENT 1 -->
+
+                <div class="announcement">
+
+                    <div class="announcement-icon">
+                        📣
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Internal Assessment
+                        </h3>
+
+                        <p>
+                            IA schedule has been published.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANNOUNCEMENT 2 -->
+
+                <div class="announcement">
+
+                    <div class="announcement-icon">
+                        🎓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Scholarship Applications
+                        </h3>
+
+                        <p>
+                            Applications are now open.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANNOUNCEMENT 3 -->
+
+                <div class="announcement">
+
+                    <div class="announcement-icon">
+                        🚌
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Bus Schedule Update
+                        </h3>
+
+                        <p>
+                            Check the updated campus routes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         JAVASCRIPT
+         ================================ -->
+
+    <script src="dashboard.js?v=1"></script>
+
+</body>
+
+</html>

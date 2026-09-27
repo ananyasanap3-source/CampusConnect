@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - CampusConnect</title>
+       <link rel="stylesheet" href="messages.css?v=2">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">Campus<span>Connect</span></div>
+        <nav>
+            <a href="http://127.0.0.1:5500/dashboard.html">🏠 Dashboard</a>
+            <a href="http://127.0.0.1:5500/students.html">👥 Students</a>
+            <a href="http://127.0.0.1:5500/study-groups.html">📚 Study Groups</a>
+            <a href="http://127.0.0.1:5500/events.html">📢 Campus Events</a>
+            <a href="http://127.0.0.1:5500/opportunities.html">💼 Opportunities</a>
+            <a href="http://127.0.0.1:5500/messages.html" class="active">💬 Messages</a>
+        </nav>
+        <button id="logoutButton">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <div>
+                <h1>Messages 💬</h1>
+                <p>Connect and communicate with students on campus.</p>
+            </div>
+            <button class="new-message-button" id="newMessageButton">+ New Message</button>
+        </div>
+
+        <div class="messages-layout">
+
+            <!-- CONVERSATION LIST -->
+            <div class="conversations">
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search conversations...">
+                </div>
+
+                <!-- id MUST be conversationsList — messages.js targets this exact id -->
+                <div id="conversationsList">
+                    <p class="loading">Loading conversations...</p>
+                </div>
+
+            </div>
+
+            <!-- CHAT WINDOW -->
+            <div class="chat-window">
+
+                <div class="chat-header">
+                    <div class="avatar large" id="chatAvatar">?</div>
+                    <div>
+                        <h2 id="chatName">Select a conversation</h2>
+                        <p id="chatStatus"></p>
+                    </div>
+                </div>
+
+                <!-- id MUST be messagesContainer — messages.js targets this exact id -->
+                <div class="chat-messages" id="messagesContainer">
+                    <div class="empty-state">
+                        <h3>No conversation selected</h3>
+                        <p>Pick someone from the left to start chatting.</p>
+                    </div>
+                </div>
+
+                <div class="message-input-area">
+                    <input type="text" id="messageInput" placeholder="Type a message...">
+                    <button id="sendButton">➤</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="messages.js?v=9"></script>
+
+</body>
+</html>

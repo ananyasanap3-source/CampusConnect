@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Events - CampusConnect</title>
+
+    <link rel="stylesheet" href="events.css">
+
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Campus<span>Connect</span>
+        </div>
+
+
+        <nav>
+
+            <a href="http://127.0.0.1:5500/dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="http://127.0.0.1:5500/students.html">
+                👥 Students
+            </a>
+
+            <a href="http://127.0.0.1:5500/study-groups.html">
+                📚 Study Groups
+            </a>
+
+            <a href="http://127.0.0.1:5500/events.html" class="active">
+                📢 Campus Events
+            </a>
+
+            <a href="http://127.0.0.1:5500/opportunities.html">
+                💼 Opportunities
+            </a>
+
+            <a href="http://127.0.0.1:5500/messages.html">
+                💬 Messages
+            </a>
+
+        </nav>
+
+
+        <button id="logoutButton">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>
+                    Campus Events 📢
+                </h1>
+
+                <p>
+                    Discover what's happening around your campus.
+                </p>
+
+            </div>
+
+
+            <button
+                class="create-button"
+                id="createEventButton"
+            >
+                + Create Event
+            </button>
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search events by name, category or venue..."
+            >
+
+        </div>
+
+
+
+        <!-- EVENTS -->
+
+        <div
+            id="eventsContainer"
+            class="events-grid"
+        >
+
+            <p class="loading">
+                Loading campus events...
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="events.js?v=1"></script>
+
+</body>
+
+</html>

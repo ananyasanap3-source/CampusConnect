@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Groups - CampusConnect</title>
+
+    <link rel="stylesheet" href="study-groups.css">
+
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Campus<span>Connect</span>
+        </div>
+
+
+        <nav>
+    <a href="http://127.0.0.1:5500/dashboard.html">
+        🏠 Dashboard
+    </a>
+
+    <a href="http://127.0.0.1:5500/students.html">
+        👥 Students
+    </a>
+
+    <a href="http://127.0.0.1:5500/study-groups.html" class="active">
+        📚 Study Groups
+    </a>
+
+    <a href="http://127.0.0.1:5500/events.html">
+        📢 Campus Events
+    </a>
+
+    <a href="http://127.0.0.1:5500/opportunities.html">
+        💼 Opportunities
+    </a>
+
+    <a href="http://127.0.0.1:5500/messages.html">
+        💬 Messages
+    </a>
+</nav>
+
+
+        <button id="logoutButton">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>
+                    Study Groups 📚
+                </h1>
+
+                <p>
+                    Find students to study, learn and prepare together.
+                </p>
+
+            </div>
+
+
+            <button
+                class="create-button"
+                id="createGroupButton"
+            >
+                + Create Group
+            </button>
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by subject, topic or group name..."
+            >
+
+        </div>
+
+
+
+        <!-- GROUPS -->
+
+        <div
+            id="groupsContainer"
+            class="groups-grid"
+        >
+
+            <p class="loading">
+                Loading study groups...
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="study-groups.js?v=2"></script>
+
+</body>
+
+</html>

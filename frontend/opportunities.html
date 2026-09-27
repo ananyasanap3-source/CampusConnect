@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Opportunities - CampusConnect</title>
+
+    <link rel="stylesheet" href="opportunities.css">
+
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Campus<span>Connect</span>
+        </div>
+
+
+        <nav>
+
+            <a href="http://127.0.0.1:5500/dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="http://127.0.0.1:5500/students.html">
+                👥 Students
+            </a>
+
+            <a href="http://127.0.0.1:5500/study-groups.html">
+                📚 Study Groups
+            </a>
+
+            <a href="http://127.0.0.1:5500/events.html">
+                📢 Campus Events
+            </a>
+
+            <a
+                href="http://127.0.0.1:5500/opportunities.html"
+                class="active"
+            >
+                💼 Opportunities
+            </a>
+
+            <a href="http://127.0.0.1:5500/messages.html">
+                💬 Messages
+            </a>
+
+        </nav>
+
+
+        <button id="logoutButton">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>
+                    Opportunities 💼
+                </h1>
+
+                <p>
+                    Discover internships, hackathons, scholarships and more.
+                </p>
+
+            </div>
+
+
+            <button
+                class="create-button"
+                id="createOpportunityButton"
+            >
+                + Post Opportunity
+            </button>
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by opportunity, company, category or skill..."
+            >
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <button
+                class="filter-button active"
+                data-category="All"
+            >
+                All
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-category="Internship"
+            >
+                💻 Internships
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-category="Hackathon"
+            >
+                🏆 Hackathons
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-category="Scholarship"
+            >
+                🎓 Scholarships
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-category="Certification"
+            >
+                📜 Certifications
+            </button>
+
+        </div>
+
+
+
+        <!-- OPPORTUNITIES -->
+
+        <div
+            id="opportunitiesContainer"
+            class="opportunities-grid"
+        >
+
+            <p class="loading">
+                Loading opportunities...
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="opportunities.js?v=1"></script>
+
+</body>
+
+</html>
