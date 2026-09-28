@@ -44,7 +44,7 @@ async function loadConversations() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/conversations/${currentUser.student_id}`
+            `https://campusconnect-production-0cdf.up.railway.app/api/conversations/${currentUser.student_id}`
         );
 
         const data = await response.json();
@@ -255,7 +255,7 @@ async function loadMessages(conversationId) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/messages/${conversationId}`
+            `https://campusconnect-production-0cdf.up.railway.app/api/messages/${conversationId}`
         );
 
         const data = await response.json();
@@ -354,7 +354,7 @@ async function sendMessage() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/messages",
+            "https://campusconnect-production-0cdf.up.railway.app/api/messages",
             {
                 method: "POST",
 
@@ -523,7 +523,7 @@ async function openNewMessageModal() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/students");
+        const response = await fetch("https://campusconnect-production-0cdf.up.railway.app/api/students");
 
         if (!response.ok) {
             throw new Error("Failed to load students");
@@ -619,7 +619,7 @@ async function startConversation(studentId) {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/conversations", {
+        const response = await fetch("https://campusconnect-production-0cdf.up.railway.app/api/conversations", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

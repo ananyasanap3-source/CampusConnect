@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://campusconnect-production-0cdf.up.railway.app";
 
 const studentsContainer = document.getElementById("studentsContainer");
 const searchInput = document.getElementById("searchInput");

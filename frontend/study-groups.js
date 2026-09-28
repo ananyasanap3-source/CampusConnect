@@ -38,7 +38,7 @@ async function loadGroups() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/study-groups");
+        const response = await fetch("https://campusconnect-production-0cdf.up.railway.app/api/study-groups");
 
         const data = await response.json();
 
@@ -152,7 +152,7 @@ async function joinGroup(groupId, buttonElement) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/study-groups/${groupId}/join`,
+            `https://campusconnect-production-0cdf.up.railway.app/api/study-groups/${groupId}/join`,
             {
                 method: "POST",
                 headers: {
@@ -238,7 +238,7 @@ document.getElementById("createGroupButton").addEventListener("click", async fun
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/study-groups", {
+        const response = await fetch("https://campusconnect-production-0cdf.up.railway.app/api/study-groups", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
