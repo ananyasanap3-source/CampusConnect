@@ -26,3 +26,14 @@ jobs:
       - name: Check server.js syntax
         working-directory: ./backend
         run: node --check server.js
+
+      - name: Build Docker image
+        working-directory: ./backend
+        run: docker build -t campusconnect-backend .
+
+      - name: Run container and test health endpoint
+        run: |
+          docker run -d -p 5000:5000 --name test-container campusconnect-backend
+          sleep 3
+          curl --fail http://localhost:5000/health || (docker logs test-container && exit 1)
+          docker stop test-container
